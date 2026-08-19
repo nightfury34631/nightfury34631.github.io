@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Mustavi Mansur Tripto | CSE Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            border-bottom: 1px solid #334155;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 8%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .profile {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero h2 {
+            color: #38bdf8;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .secondary {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 8%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: white;
+            font-size: 34px;
+            margin-bottom: 45px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 10px 16px;
+            border-radius: 20px;
+            margin: 6px;
+            color: #cbd5e1;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111827;
+            color: #64748b;
+            border-top: 1px solid #334155;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Mustavi Mansur Tripto</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <!-- We will add your profile picture here later -->
+            <img src="profile.jpg" alt="Mustavi Mansur Tripto" class="profile">
+
+            <h1>Mustavi Mansur Tripto</h1>
+
+            <h2>CSE Student | Aspiring Backend & AI Engineer</h2>
+
+            <p>
+                Computer Science and Engineering student at Bangladesh University
+                of Professionals, passionate about software development,
+                backend engineering, artificial intelligence and building
+                practical technology solutions.
+            </p>
+
+            <div class="buttons">
+                <a href="cv.pdf" class="btn primary" target="_blank">
+                    Download My CV
+                </a>
+
+                <a href="#projects" class="btn secondary">
+                    View My Projects
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p class="about">
+            I am a Computer Science and Engineering student at Bangladesh
+            University of Professionals. I enjoy learning how software systems
+            work and turning ideas into functional applications. My current
+            interests include backend development, databases, artificial
+            intelligence and software engineering.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+            <span>C</span>
+            <span>C++</span>
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>SQL</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Bootstrap</span>
+            <span>Node.js</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Linux</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>Redis</span>
+            <span>Arduino</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Stray Animal Rescue & Adoption System</h3>
+                <p>
+                    A role-based web application for stray animal reporting,
+                    rescue, medical treatment and adoption using PHP,
+                    MySQL and Bootstrap.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Prioritization Assistant</h3>
+                <p>
+                    An OOP-based JavaFX desktop application designed to
+                    organize and prioritize tasks efficiently.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Line Following Robot</h3>
+                <p>
+                    An autonomous line-following robot built using Arduino Uno,
+                    C/C++, IR sensors and an L298N motor driver.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies & Interests</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Programming</h3>
+                <p>
+                    Exploring programming, algorithms and software development.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Technology</h3>
+                <p>
+                    Learning about backend systems, databases and AI.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Music</h3>
+                <p>
+                    Enjoying music and discovering new artists and genres.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Let's Connect</h2>
+
+        <p>
+            <a href="mailto:mansurmustavi@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/nightfury34631" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/mustavi-mansur-tripto-42a5a8175"
+               target="_blank">
+                LinkedIn
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        © 2026 Mustavi Mansur Tripto. All rights reserved.
+    </footer>
+
+</body>
+</html>
